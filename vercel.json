@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/profile/:userId", "destination": "/profile/:userId" },
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
