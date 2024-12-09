@@ -59,7 +59,7 @@ function Profile() {
   const fetchUserProfileAndRecipes = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/v1/auth/${userId}`
+        `https://demo-back-end.onrender.com/api/v1/auth/${userId}`
       );
       setUserData(response.data.user);
       setName(response.data.user.name);
