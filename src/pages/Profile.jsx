@@ -6,7 +6,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loader from "./Loader.jsx";
 
-const recipesUrl = "http://localhost:5000/api/v1/recipes/test/?createdBy=";
+const recipesUrl =
+  "https://demo-back-end.onrender.com/api/v1/recipes/test/?createdBy=";
 
 function Profile() {
   const { userId } = useParams();

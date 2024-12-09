@@ -22,7 +22,7 @@ function HomeBrowse() {
     const fetchUsers = async () => {
       try {
         const promises = userIds.map((id) =>
-          axios.get(`http://localhost:5000/api/v1/auth/${id}`)
+          axios.get(`https://demo-back-end.onrender.com/api/v1/auth/${id}`)
         );
 
         const responses = await Promise.all(promises);

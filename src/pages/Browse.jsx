@@ -6,8 +6,8 @@ import img1 from "../images/browseimg1.jpg";
 import img2 from "../images/browseimg2.jpg";
 import Loader from "./Loader.jsx";
 
-const recipesUrl = "http://localhost:5000/api/v1/recipes/all";
-const userUrl = "http://localhost:5000/api/v1/auth/";
+const recipesUrl = "https://demo-back-end.onrender.com/api/v1/recipes/all";
+const userUrl = "https://demo-back-end.onrender.com/api/v1/auth/";
 
 function Browse() {
   const location = useLocation();

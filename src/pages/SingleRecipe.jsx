@@ -4,8 +4,8 @@ import axios from "axios";
 import styles from "../CSS/SingleRecipe.module.css";
 import Loader from "./Loader.jsx";
 
-const singleRecipesUrl = "http://localhost:5000/api/v1/recipes/";
-const userUrl = "http://localhost:5000/api/v1/auth/";
+const singleRecipesUrl = "https://demo-back-end.onrender.com/api/v1/recipes/";
+const userUrl = "https://demo-back-end.onrender.com/api/v1/auth/";
 
 function SingleRecipe() {
   const { id } = useParams();
