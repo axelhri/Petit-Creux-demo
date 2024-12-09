@@ -164,6 +164,7 @@
   gap: 0.5rem;
   inline-size: 90%;
   margin-inline: auto;
+  min-block-size: 70vh;
 }
 
 .browseImg1,
