@@ -1,0 +1,223 @@
+#homeBrowse {
+  background: white;
+  padding-block: 2rem;
+}
+
+#homeBrowse .inputContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url(../../images/homebrowse.jpg) no-repeat;
+  min-block-size: 40vh;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+#homeBrowse h3 {
+  font-family: var(--ff-poppins);
+  color: var(--clr-primary-600);
+  font-size: 1.8em;
+  inline-size: max-content;
+  margin-inline: auto;
+  padding-block: 2rem;
+}
+
+#homeBrowse h3 span {
+  font-family: var(--ff-poppins);
+  color: black;
+}
+
+#homeBrowse .inputContainer p {
+  font-family: var(--ff-poppins);
+  color: var(--clr-white);
+  font-size: 1.8em;
+  margin-block-end: 1rem;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 3px 3px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.homeSearch {
+  margin-inline: auto;
+  position: relative;
+  inline-size: max-content;
+}
+
+.homeSearch input {
+  inline-size: 17rem;
+  block-size: 2.5rem;
+  border-radius: 20px;
+  padding: 0.5rem;
+  font-family: var(--ff-button);
+  border: none;
+  font-size: 1rem;
+}
+
+.homeSearch input::placeholder {
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: var(--ff-button);
+}
+
+.homeSearch button {
+  position: absolute;
+  top: 1.3rem;
+  right: -3rem;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  background: var(--clr-third-600);
+  color: white;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  block-size: 3rem;
+  inline-size: 5rem;
+  border-radius: 30px;
+  transition: var(--transition-02);
+  cursor: pointer;
+}
+
+.homeSearch button:hover {
+  background: var(--clr-third-700);
+}
+
+.homeBrowseImage {
+  margin-block: 2rem;
+}
+
+.homeBrowseImage p:first-child {
+  text-align: center;
+  margin-inline: auto;
+  font-family: var(--ff-poppins);
+  margin-block-end: 1rem;
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+.userQuotesImg img {
+  width: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  filter: brightness(0.8);
+  transition: var(--transition-02);
+}
+
+.userQuotes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.userQuotes a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userQuotes a:hover .userQuotesImg img {
+  filter: brightness(1);
+}
+
+.usersName {
+  font-family: var(--ff-button);
+  letter-spacing: 0.05rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: var(--clr-primary-500);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 15px;
+  margin-block: 0.5rem;
+  transition: var(--transition-02);
+}
+
+.userQuotes a:hover .usersName {
+  background: var(--clr-primary-600);
+  transform: translateY(-2rem);
+}
+
+.usersBox > * + * {
+  margin-block-start: 1rem;
+}
+
+.userQuotes p {
+  inline-size: 20rem;
+  text-align: center;
+  font-style: italic;
+  margin-block-start: 0.5rem;
+  font-family: var(--ff-karla);
+}
+
+/* min 1000px */
+
+@media screen and (min-width: 1000px) {
+  .usersBox {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .usersBox > * + * {
+    margin-block-start: 0rem;
+  }
+
+  #homeBrowse .inputContainer {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+      url(../../images/homebrowse.jpg) no-repeat 0 -10rem;
+    min-block-size: 40vh;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+/* min 1200px */
+
+@media screen and (min-width: 1200px) {
+  .usersBox {
+    margin-inline: auto;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .homeSearch input::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .homeSearch input {
+    inline-size: 40rem;
+    block-size: 3rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  #homeBrowse h3 {
+    font-size: 2.8em;
+  }
+
+  #homeBrowse .inputContainer p {
+    font-size: 2em;
+  }
+
+  .homeSearch button {
+    position: absolute;
+    top: 1.5rem;
+    right: -6rem;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    background: var(--clr-third-600);
+    color: white;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    block-size: 3.5rem;
+    inline-size: 8rem;
+    border-radius: 30px;
+  }
+
+  .homeBrowseImage p:first-child {
+    margin-block-end: 3rem;
+  }
+}

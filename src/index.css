@@ -1,0 +1,106 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* ============= VARIABLES ============= */
+
+:root {
+  /* primary color */
+  --clr-primary-50: #f0f8fe;
+  --clr-primary-100: #deeefb;
+  --clr-primary-200: #c4e2f9;
+  --clr-primary-300: #9bd0f5;
+  --clr-primary-400: #6cb6ee;
+  --clr-primary-500: #4a99e7;
+  --clr-primary-600: #337cdb;
+  --clr-primary-700: #2c68c9;
+  --clr-primary-800: #2955a4;
+  --clr-primary-900: #274981;
+  --clr-primary-950: #1c2e4f;
+
+  /* third color */
+  --clr-third-50: #fcf4f4;
+  --clr-third-100: #f9e7e7;
+  --clr-third-200: #f5d3d3;
+  --clr-third-300: #eeb3b3;
+  --clr-third-400: #e59494;
+  --clr-third-500: #d36060;
+  --clr-third-600: #be4444;
+  --clr-third-700: #9f3636;
+  --clr-third-800: #843030;
+  --clr-third-900: #6f2d2d;
+  --clr-third-950: #3b1414;
+
+  /* nuance */
+  --clr-nuance-50: #f6f6f6;
+  --clr-nuance-100: #e7e7e7;
+  --clr-nuance-200: #d1d1d1;
+  --clr-nuance-300: #b0b0b0;
+  --clr-nuance-400: #888888;
+  --clr-nuance-500: #6d6d6d;
+  --clr-nuance-600: #5d5d5d;
+  --clr-nuance-700: #4f4f4f;
+  --clr-nuance-800: #454545;
+  --clr-nuance-900: #3d3d3d;
+  --clr-nuance-950: #000000;
+
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+
+  /* font family */
+  --ff-button: "Outfit";
+  --ff-satisfy: "Satisfy";
+  --ff-montserrat: "Montserrat";
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-karla: "Karla", sans-serif;
+
+  /* misc */
+  --transition-02: all 0.2s ease-in-out;
+  --transition-04: all 0.4s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+.img {
+  display: block;
+  object-fit: cover;
+  max-inline-size: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-white);
+}
+
+input {
+  outline: none;
+}
+
+.loaderContainer {
+  min-block-size: 100vh;
+  position: relative;
+}
+
+.loader {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

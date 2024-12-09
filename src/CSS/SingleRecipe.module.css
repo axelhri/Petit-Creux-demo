@@ -1,0 +1,360 @@
+#singleRecipeContainer {
+  max-inline-size: 90vw;
+  margin-inline: auto;
+  margin-block-end: 4rem;
+}
+
+#singleRecipeMain header {
+  max-inline-size: 95vw;
+  margin-inline: auto;
+}
+
+#singleRecipeMain button {
+  cursor: pointer;
+}
+
+#singleRecipeMain button:hover :not(.deleteRecipeButton) {
+  color: var(--clr-third-700);
+}
+
+.userCategoryBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block-start: 1.5rem;
+  background: var(--clr-third-600);
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  padding-inline: 1rem;
+  padding-block-end: 1rem;
+}
+
+.userImgBox {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.userCategoryBox p {
+  font-family: var(--ff-button);
+  font-size: 1.3rem;
+  color: white;
+}
+
+.userImgBox img {
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 2px solid var(--clr-third-200);
+  object-fit: cover;
+}
+
+.imgDateBox img {
+  min-inline-size: 100%;
+  block-size: 100%;
+  max-block-size: 100%;
+  max-inline-size: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.imgDescBox {
+  display: flex;
+  padding: 0.5rem;
+  margin-block: 1rem 2rem;
+  flex-direction: column;
+}
+
+.recipeImgBox {
+  position: relative;
+}
+
+.recipeImgBox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: linear-gradient(
+    45deg,
+    var(--clr-third-950),
+    var(--clr-third-500),
+    var(--clr-third-700),
+    var(--clr-third-800),
+    var(--clr-third-700),
+    var(--clr-third-500),
+    var(--clr-third-950)
+  );
+  background-size: 300% 300%;
+  animation: color 5s ease-in-out infinite;
+  inline-size: 100%;
+  block-size: 100%;
+  top: -0.5rem;
+  left: -0.5rem;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.createdAtRecipe {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.createdAtRecipe p,
+span {
+  font-family: var(--ff-button);
+}
+
+.titleDescBox {
+  margin-block-start: 1rem;
+}
+
+.titleDescBox h1 {
+  font-size: 1.2rem;
+  color: var(--clr-third-600);
+  font-family: var(--ff-montserrat);
+}
+
+.titleDescBox p {
+  margin-block-start: 0.5rem;
+  font-size: max-content;
+  line-height: 1.5;
+  border-left: 1px solid rgba(0, 0, 0, 0.7);
+  padding-inline-start: 0.5rem;
+  margin-inline-start: 1rem;
+  word-wrap: break-word;
+}
+
+.singleRecipeIng {
+  display: flex;
+  margin-block: 0.5rem 1rem;
+  align-items: center;
+  font-size: 1.2rem;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.singleRecipeIng i {
+  color: var(--clr-third-500);
+}
+
+.sectionLine {
+  block-size: 0.1rem;
+  inline-size: 40%;
+  background: var(--clr-black);
+  border-radius: 50px;
+  margin-inline-start: 1rem;
+}
+
+.eatersBox {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--clr-nuance-950);
+  border-radius: 10px;
+  inline-size: max-content;
+  overflow: hidden;
+}
+
+.persNumber {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.eatersBox p {
+  color: var(--clr-third-500);
+  font-weight: 500;
+}
+
+.eatersBox span {
+  font-weight: 400;
+}
+
+.eatersBox button {
+  background: transparent;
+  border: none;
+  padding: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.eatersBox button:first-child {
+  border-right: 2px solid var(--clr-nuance-950);
+}
+
+.eatersBox button:last-child {
+  border-left: 2px solid var(--clr-nuance-950);
+}
+
+.ingredientList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-block-start: 2rem;
+}
+
+.recipeIngredientContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.recipeIngredientContainer p {
+  font-family: var(--ff-button);
+}
+
+.recipeIngredientContainer span {
+  font-weight: 600;
+}
+
+.deleteRecipeButton {
+  background: red;
+  color: white;
+  font-family: var(--ff-button);
+  font-size: 1.3em;
+  border: none;
+  border-radius: 7px;
+  padding: 0.3rem 1rem;
+  transition: var(--transition-02);
+}
+
+.deleteRecipeButton:hover {
+  background: rgb(163, 0, 0);
+}
+
+.deleteRecipe {
+  display: flex;
+  justify-content: center;
+  margin-block-end: 1rem;
+}
+
+/* min 550 px */
+
+@media screen and (min-width: 550px) {
+  .imgDescBox {
+    display: flex;
+    padding: 0.5rem;
+    margin-block: 1rem 2rem;
+    flex-direction: row;
+  }
+
+  .titleDescBox {
+    margin-block-start: 0rem;
+    margin-inline-start: 1rem;
+  }
+
+  .titleDescBox p {
+    margin-block-start: 0.5rem;
+    font-size: max-content;
+    line-height: 1.5;
+    border-left: 1px solid rgba(0, 0, 0, 0.7);
+    padding-inline-start: 0.5rem;
+    margin-inline-start: 1rem;
+    word-break: break-all;
+  }
+}
+
+/* min 800px */
+
+@media screen and (min-width: 800px) {
+  .titleDescBox p {
+    width: 20rem;
+  }
+}
+
+/* min 1000px */
+
+@media screen and (min-width: 1000px) {
+  .titleDescBox p {
+    width: 30rem;
+  }
+}
+
+/* min 1200px */
+
+@media screen and (min-width: 1200px) {
+  .titleDescBox h1 {
+    font-size: max-content;
+  }
+
+  .imgDateBox img {
+    min-inline-size: 30rem;
+    block-size: 20rem;
+  }
+
+  .titleDescBox p {
+    margin-block-start: 0.5rem;
+    font-size: max-content;
+    line-height: 1.5;
+    border-left: 1px solid rgba(0, 0, 0, 0.7);
+  }
+
+  .ingredientList {
+    max-inline-size: 50%;
+  }
+
+  .titleDescBox p {
+    max-inline-size: 80%;
+    word-wrap: break-word;
+  }
+
+  #singleRecipeContainer {
+    max-inline-size: 70vw;
+    margin-inline: auto;
+    margin-block-end: 4rem;
+  }
+
+  #singleRecipeMain header {
+    max-inline-size: 85vw;
+    margin-inline: auto;
+  }
+}
+
+/* min 1600 px */
+
+@media screen and (min-width: 1600px) {
+  .titleDescBox p {
+    margin-block-start: 0.5rem;
+    font-size: max-content;
+    line-height: 1.5;
+    border-left: 1px solid rgba(0, 0, 0, 0.7);
+    width: 45rem;
+  }
+
+  .titleDescBox h1 {
+    font-size: 1.5rem;
+  }
+
+  .ingredientList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-block-start: 2rem;
+  }
+
+  .userImgBox p {
+    font-size: 1.7rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .imgDateBox img {
+    min-inline-size: 35rem;
+    block-size: 25rem;
+  }
+}

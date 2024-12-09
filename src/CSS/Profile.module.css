@@ -1,0 +1,547 @@
+#profileMain {
+  min-block-size: 95vh;
+}
+
+.settings {
+  text-align: end;
+  padding: 0.5rem;
+  background-color: var(--clr-third-500);
+  block-size: 20vh;
+  position: relative;
+  color: white;
+}
+
+.settingsBox button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--clr-white);
+  cursor: pointer;
+}
+
+.settingsBox button i {
+  animation: settingsSpin linear 15s infinite;
+}
+
+@keyframes settingsSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.settingsMenu {
+  background: white;
+  position: absolute;
+  top: 3.5rem;
+  right: 0.5rem;
+  z-index: 1;
+  border-radius: 7px;
+  block-size: 0rem;
+  transition: block-size 0.3s ease-out;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.settingsMenu.open {
+  block-size: 4rem;
+}
+
+.settingsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  align-items: flex-start;
+}
+
+.settingsList li {
+  inline-size: 100%;
+  text-align: start;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+}
+
+.settingsList li:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.modifyAccount button {
+  font-family: var(--ff-button);
+  color: var(--clr-nuance-900);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.deleteAccount button {
+  color: rgb(196, 0, 0);
+  font-size: 0.9rem;
+  border: none;
+  background: none;
+  font-weight: 500;
+}
+
+.deleteBox {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  background: var(--clr-white);
+  inline-size: 60%;
+}
+
+.deleteBoxContent {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.deleteBox button {
+  background: red;
+  border: none;
+  color: var(--clr-white);
+  padding: 0.3rem;
+  font-family: var(--ff-button);
+  font-size: 1rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  block-size: 2.5rem;
+  cursor: pointer;
+  transition: var(--transition-02);
+}
+
+.deleteBox button:hover {
+  background: rgb(192, 1, 1);
+}
+
+.deleteBox p {
+  inline-size: 100%;
+  font-size: 1.1rem;
+  font-family: var(--ff-button);
+  text-align: center;
+}
+
+.deleteBox i {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+.deleteBox i:hover {
+  color: red;
+}
+
+.profileImage {
+  block-size: 10rem;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  border: 4px solid var(--clr-white);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.updateProfilForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  inline-size: 20rem;
+  z-index: 90;
+}
+
+.updateProfilForm h1 {
+  text-align: center;
+  margin-block-end: 2rem;
+  font-family: var(--ff-poppins);
+  letter-spacing: 0.03rem;
+  color: var(--clr-nuance-950);
+}
+
+.modifyProfileContainer {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background: var(--clr-white);
+  padding: 0.5rem;
+  border-radius: 5px;
+  padding-block: 1rem;
+  position: relative;
+}
+
+.closeFormButton {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.closeFormButton:hover {
+  color: red;
+}
+
+.modifyProfileContainer > * + * {
+  margin-block-start: 0.5rem;
+}
+
+.udpateProfilImage {
+  height: 100px;
+  width: 100px;
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-block-end: 2rem;
+  outline: 3px solid var(--clr-primary-700);
+}
+
+.udpateProfilImage input[type="file"] {
+  position: absolute;
+  top: 1rem;
+  left: 15rem;
+  transform: scale(8);
+  opacity: 0;
+}
+
+.updateProfilForm img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.udpateProfilImage i {
+  color: var(--clr-primary-500);
+  font-size: 1.7rem;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--transition-02);
+}
+
+.udpateProfilImage:hover i {
+  color: var(--clr-primary-800);
+  top: 75%;
+}
+
+.formGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  inline-size: 100%;
+  justify-content: flex-start;
+}
+
+.formGroup input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0.2rem;
+  font-family: var(--ff-karla);
+}
+
+.formGroup label {
+  inline-size: 7rem;
+  padding: 0.2rem;
+  text-align: end;
+  font-family: var(--ff-button);
+}
+
+.formGroup i {
+  color: var(--clr-nuance-800);
+}
+
+.updateProfilButton {
+  margin-block-start: 2rem;
+  text-align: center;
+}
+
+.updateProfilButton button {
+  font-family: var(--ff-button);
+  font-size: 1.2rem;
+  padding: 0.3rem 1rem;
+  border: none;
+  background: var(--clr-primary-600);
+  color: var(--clr-white);
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+  border-radius: 7px;
+  transition: var(--transition-02);
+  cursor: pointer;
+}
+
+.updateProfilButton button:hover {
+  background: var(--clr-primary-800);
+}
+
+.userNameBox {
+  text-align: center;
+  margin-block-start: 5.5rem;
+}
+
+.userNameBox h1 {
+  font-family: var(--ff-montserrat);
+  letter-spacing: 0.05rem;
+  color: var(--clr-nuance-950);
+  font-weight: 300;
+}
+
+.userNameBox h2 {
+  font-family: "Afacad Flux";
+  font-weight: 400;
+  font-size: 2.2rem;
+  margin-block-start: 2rem;
+}
+
+.userNameBox p {
+  font-family: var(--ff-karla);
+  margin-block-start: 0.5rem;
+  max-inline-size: 20rem;
+  margin-inline: auto;
+  font-style: italic;
+}
+
+.profileBottomSection {
+  margin-block: 2rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+  inline-size: 90%;
+  margin-inline: auto;
+}
+
+article {
+  max-inline-size: 24rem;
+  inline-size: 100%;
+  min-block-size: 20rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: var(--transition-04);
+  position: relative;
+}
+
+article:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+article a {
+  color: inherit;
+}
+
+.articleImgContainer img {
+  block-size: 10rem;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  max-block-size: 100%;
+  object-fit: cover;
+  transition: var(--transition-04);
+}
+
+.articleImgContainer {
+  overflow: hidden;
+}
+
+.articleImgContainer img:hover {
+  transform: scale(1.05);
+}
+
+.articleDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  block-size: 12rem;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.articleBtn {
+  padding: 0.2rem 0.7rem;
+  background: var(--clr-third-500);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.1rem;
+  font-family: var(--ff-button);
+  letter-spacing: 0.07rem;
+  border: 1px solid var(--clr-white);
+  cursor: pointer;
+}
+
+.articleRecipeName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  color: var(--clr-third-600);
+}
+
+.articleDate {
+  color: var(--clr-white);
+  font-family: var(--ff-button);
+  font-weight: 500;
+}
+
+.recipeDesc p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  font-family: var(--ff-montserrat);
+  font-size: 0.9rem;
+}
+
+.nameCategoryBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nameCategoryBox p {
+  font-size: 1rem;
+  font-family: var(--ff-button);
+  text-transform: capitalize;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--clr-third-600);
+  border-bottom-right-radius: 50px;
+  padding: 0.3rem 1rem;
+  color: var(--clr-white);
+}
+
+.noRecipesBox {
+  inline-size: 50%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.noRecipesBox p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.noRecipesBox a {
+  text-align: center;
+  background-color: var(--clr-primary-500);
+  font-family: var(--ff-button);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  max-inline-size: 80%;
+  transition: var(--transition-02);
+  margin-inline: auto;
+  border: 2px solid var(--clr-primary-500);
+}
+
+.noRecipesBox a:hover {
+  transform: scale(1.03);
+}
+
+/* min 800px */
+
+@media screen and (min-width: 800px) {
+  .articleImgContainer img {
+    block-size: 15rem;
+  }
+
+  .userNameBox p {
+    max-inline-size: 40rem;
+  }
+
+  .profileBottomSection {
+    margin-block: 2rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    inline-size: 90%;
+    margin-inline: auto;
+    gap: 2rem;
+  }
+}
+
+/* min 1200px */
+
+@media screen and (min-width: 1200px) {
+  .articleImgContainer img {
+    block-size: 12rem;
+  }
+
+  .articleDesc {
+    gap: 1rem;
+  }
+
+  .profileBottomSection {
+    margin-block: 2rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    inline-size: 90%;
+    margin-inline: auto;
+    gap: 2rem;
+  }
+
+  .settingsMenu {
+    inline-size: 15rem;
+  }
+
+  .settingsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.5rem;
+    align-items: flex-start;
+    font-size: 1rem;
+  }
+
+  .deleteAccount button {
+    font-size: 1rem;
+  }
+
+  .deleteBox {
+    inline-size: 50%;
+  }
+
+  .userNameBox p {
+    max-inline-size: 50rem;
+  }
+}
+
+/* min 1800px */
+
+@media screen and (min-width: 1800px) {
+  .articleImgContainer img {
+    block-size: 14rem;
+  }
+
+  .profileBottomSection {
+    margin-block: 2rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    inline-size: 70%;
+    margin-inline: auto;
+    gap: 2rem;
+  }
+
+  .articleImgContainer {
+    block-size: 55%;
+  }
+
+  .deleteBox {
+    inline-size: 30%;
+  }
+}

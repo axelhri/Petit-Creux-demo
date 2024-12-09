@@ -1,0 +1,50 @@
+#errorPageMain {
+  background: rgb(20, 20, 20);
+  block-size: 100vh;
+}
+
+.errorImage {
+  inline-size: 100vw;
+  object-fit: cover;
+}
+
+#errorPageMain section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#errorPageMain h1 {
+  font-size: 1.2em;
+  font-family: var(--ff-poppins);
+  letter-spacing: 0.05rem;
+  text-align: center;
+  color: white;
+}
+
+#errorPageMain a {
+  color: var(--clr-primary-500);
+  font-size: 1.2em;
+  font-family: var(--ff-button);
+  letter-spacing: 0.05rem;
+}
+
+/* min 1000px */
+
+@media screen and (min-width: 1000px) {
+  .errorImage {
+    inline-size: 100vw;
+    block-size: 80vh;
+    object-fit: cover;
+  }
+
+  #errorPageMain h1 {
+    font-size: 1.6em;
+    margin-block-start: 1rem;
+  }
+
+  #errorPageMain a {
+    font-size: 1.6em;
+  }
+}
